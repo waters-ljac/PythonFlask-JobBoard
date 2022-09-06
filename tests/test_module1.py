@@ -67,6 +67,9 @@ def test_app_index_route_function_module1():
     assert result_len, "Have you called the `render_template` function."
 
     return_values = get_functions_returns(app.jobs)[0]
+
+    print(return_values)
+
     return_exists = (
         return_values["value/args/s"] == "index.html"
         and return_values["value/func/id"] == "render_template"

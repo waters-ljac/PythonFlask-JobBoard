@@ -1,8 +1,17 @@
-import flask
+# import flask
 
-@route('/')
-@route('/jobs')
+# app = flask.Flask(__name__)
+
+# @app.route('/')
+# @app.route('/jobs')
+# def jobs():
+#     return flask.render_template('index.html')
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+@app.route('/jobs')
 def jobs():
-    return flask.render_template('index.html')
-
-app = flask.Flask(__name__)
+    return render_template('index.html')
